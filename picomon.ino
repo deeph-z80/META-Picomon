@@ -107,7 +107,6 @@ Color pico_8_palette_darker[] = {
   (Color)0x9b48   // PEACH
 };
 
-// debug
 byte player_x;
 byte player_y;
 byte player_direction;
@@ -177,7 +176,6 @@ void setup() {
   gb.setFrameRate(40);
   gb.save.config(savefileDefaults);
   gb.display.colorIndex = pico_8_palette;
-  player_sprite_set.setTransparentColor((Color)0xff9d);
 }
 
 void loop() {
@@ -745,8 +743,8 @@ void add_picomon(byte position, byte id, byte lvl, unsigned short hp, unsigned s
   player_picomons[position + MOVE_4] = (unsigned short) move_4;
 }
 
-unsigned short tmp_array[] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
 void swap_picomons(byte first_id, byte second_id) {
+  unsigned short tmp_array[] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
   memcpy(&tmp_array, &player_picomons[first_id * PLAYER_PICOMONS_LENGTH], PLAYER_PICOMONS_LENGTH * 2);
   memcpy(&player_picomons[first_id * PLAYER_PICOMONS_LENGTH], &player_picomons[second_id * PLAYER_PICOMONS_LENGTH], PLAYER_PICOMONS_LENGTH * 2);
   memcpy(&player_picomons[second_id * PLAYER_PICOMONS_LENGTH], &tmp_array, PLAYER_PICOMONS_LENGTH * 2);

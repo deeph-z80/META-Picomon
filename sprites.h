@@ -1,10 +1,9 @@
 const uint8_t tiles[]={
-  8,8,
-  105, 0,
-  0,
-  0xFF,
-  1,
-  
+  8, 8,   // tiles width & height
+  105, 0, // frames (tiles) amount lower & upper 8-bit
+  0,      // frames loop (0 = no animation)
+  0xFF,   // transparent color (greater than 0x0F = no transparency)
+  1,      // color mode (1 = indexed)
   0x77,0x77,0x77,0x77,
   0x77,0x77,0x77,0x77,
   0x77,0x77,0x77,0x77,
@@ -849,12 +848,11 @@ const uint8_t tiles[]={
 Image tile_set(tiles);
 
 const uint8_t player_sprites[]={
-  8,8,
-  12, 0,
-  0,
-  0xFF,
-  1,
-  
+  8, 8,   // sprites width & height
+  12, 0,  // sprites amount lower & upper 8-bit
+  0,      // frames loop (0 = no animation)
+  7,      // transparent color (14 = white)
+  1,      // color mode (1 = indexed)
   0x77,0x78,0x88,0x87,
   0x77,0x88,0x88,0x88,
   0x88,0x8f,0x88,0x66,

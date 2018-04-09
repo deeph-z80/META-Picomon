@@ -116,7 +116,7 @@ const unsigned short default_player_picomons[] = {
 #define NO_ITEM           255
 #define NO_DROPPABLE_ITEM I_GARDEN_KEY
 byte player_items[] = {
-  I_POTION, I_PICOBALL, I_PICOBALL, I_SMOKEBALL, I_RESURRECT, I_CANDY, I_SWIM_SUIT, NO_ITEM, NO_ITEM, NO_ITEM
+  NO_ITEM, NO_ITEM, NO_ITEM, NO_ITEM, NO_ITEM, NO_ITEM, NO_ITEM, NO_ITEM, NO_ITEM, NO_ITEM
 };
 const byte default_player_items[] = {
   NO_ITEM, NO_ITEM, NO_ITEM, NO_ITEM, NO_ITEM, NO_ITEM, NO_ITEM, NO_ITEM, NO_ITEM, NO_ITEM
